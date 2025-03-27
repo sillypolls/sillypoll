@@ -10,6 +10,22 @@
         document.getElementById("response1").innerHTML = response1
         document.getElementById("response2").innerHTML = response2
     }
+    var result1 = 0
+    var result2 = 0
+    function finish() {
+        if (result1 > result2) {
+            alert(`${response1} WON!!!!!`)
+        }
+        else if (result2 > result1) {
+            alert(`${response2} WON!!!!!`)
+        }
+        else if (result1 = result2) {
+            alert("Its a tie.")
+        }
+        else {
+            alert("If you're seeing this, I messed up somehow.")
+        }
+    }
 </script>
 <head>
     <meta charset="UTF-8"/>

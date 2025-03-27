@@ -13,8 +13,10 @@ applySystemTheme();
 const centeredText1 = document.querySelector('.centered-text1');
 centeredText1.addEventListener('click', () => {
     centeredText1.classList.toggle('clicked');
+    result1++
 });
 const centeredText2 = document.querySelector('.centered-text2');
 centeredText1.addEventListener('click', () => {
     centeredText2.classList.toggle('clicked');
+    result2++
 });
