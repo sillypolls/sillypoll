@@ -20,7 +20,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.centered-text {
+.centered-text1 {
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.centered-text2 {
     font-size: 4rem;
     cursor: pointer;
     transition: transform 0.5s, color 0.5s;

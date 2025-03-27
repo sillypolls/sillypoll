@@ -10,7 +10,11 @@ function applySystemTheme() {
 
 applySystemTheme();
 
-const centeredText = document.querySelector('.centered-text');
-centeredText.addEventListener('click', () => {
-    centeredText.classList.toggle('clicked');
+const centeredText1 = document.querySelector('.centered-text1');
+centeredText1.addEventListener('click', () => {
+    centeredText1.classList.toggle('clicked');
+});
+const centeredText2 = document.querySelector('.centered-text2');
+centeredText1.addEventListener('click', () => {
+    centeredText2.classList.toggle('clicked');
 });
