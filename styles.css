@@ -3,11 +3,11 @@
 :root {
     --back-light: #fbfbfe;
     --text-light: #040316;
-    --accent-light: #2f27ce;
 
     --back-dark: #010104;
     --text-dark: #eae9fc;
-    --accent-dark: #3a31d8;
+
+    --finish: #36c31d;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 .centered-text1 {
-    font-size: 4rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: transform 0.5s, color 0.5s;
 
@@ -31,7 +31,61 @@ body {
     -ms-user-select: none;
 }
 .centered-text2 {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.centered-text3 {
     font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.centered-text4 {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.centered-text5 {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.centered-text6 {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.centered-text7 {
+    font-size: 2rem;
     cursor: pointer;
     transition: transform 0.5s, color 0.5s;
 
@@ -51,12 +105,76 @@ body.dark-mode {
     color: var(--text-dark);
 }
 
-.light-mode .centered-text.clicked {
-    color: var(--accent-light);
+.light-mode .centered-text1.clicked1 {
+    color: var(--accent-light1);
     transform: rotate(360deg);
 }
 
-.dark-mode .centered-text.clicked {
-    color: var(--accent-dark);
+.dark-mode .centered-text1.clicked1 {
+    color: var(--accent-dark1);
     transform: rotate(360deg);
+}
+
+.light-mode .centered-text2.clicked2 {
+    color: var(--accent-light2);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text2.clicked2 {
+    color: var(--accent-dark2);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text3.clicked3 {
+    color: var(--finish);
+    transform: rotate(360deg);
+}
+
+.light-mode .centered-text3.clicked3 {
+    color: var(--finish);
+    transform: rotate(360deg);
+}
+
+.light-mode .centered-text4.clicked4 {
+    color: var(--accent-light1);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text4.clicked4 {
+    color: var(--accent-dark1);
+    transform: rotate(360deg);
+}
+
+.light-mode .centered-text5.clicked5 {
+    color: var(--accent-light2);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text5.clicked5 {
+    color: var(--accent-dark2);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text6.clicked6 {
+    transform: rotate(360deg);
+}
+
+.light-mode .centered-text6.clicked6 {
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text7.clicked7 {
+    transform: rotate(360deg);
+}
+
+.light-mode .centered-text7.clicked7 {
+    transform: rotate(360deg);
+}
+#centered-text3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 23px;
 }

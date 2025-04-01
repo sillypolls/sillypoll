@@ -1,43 +1,128 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <script>
-    var response1 = "NULL"
-    var response2 = "NULL"
+    const audio1 = new Audio('./1.wav')
+    const audio2 = new Audio('./2.wav')
+    const audio3 = new Audio('./3.wav')
+    const audio4 = new Audio('./4.wav')
+    const audio5 = new Audio('./5.wav')
+    const audio6 = new Audio('./6.wav')
+    const audio8 = new Audio('./8.wav')
+    var finished = false
+    var response1 = `NULL`
+    var response2 = `NULL`
+    var response4 = `NULL`
+    var response5 = `NULL`
+    var response6 = `NULL`
+    var response7 = `NULL`
+    var finishtxt = "Finish!"
     response1 = prompt("Answer one:")
     response2 = prompt("Answer two:")
-    alert(`Answer one is: ${response1} \n Answer two is: ${response2}`)
+    response4 = prompt("Answer three:")
+    response5 = prompt("Answer four:")
+    response6 = prompt("Answer five:")
+    response7 = prompt("Answer six:")
     window.onload = function() {
         document.getElementById("response1").innerHTML = response1
         document.getElementById("response2").innerHTML = response2
+        document.getElementById("response4").innerHTML = response4
+        document.getElementById("response5").innerHTML = response5
+        document.getElementById("response6").innerHTML = response6
+        document.getElementById("response7").innerHTML = response7
+        document.getElementById("finish").innerHTML = finishtxt
     }
     var result1 = 0
     var result2 = 0
+    var result7 = 0
+    var result4 = 0
+    var result5 = 0
+    var result6 = 0
+    result1++
+    result2++
+    result7++
+    result4++
+    result5++
+    result6++
+    function update1() {
+        result1++
+        document.getElementById("response1").innerHTML = response1 + `: ${result1 - 1}`
+        audio1.play()
+    }
+    function update2() {
+        result2++
+        document.getElementById("response2").innerHTML = response2 + `: ${result2 - 1}`
+        audio2.play()
+    }
+    function update4() {
+        result4++
+        document.getElementById("response4").innerHTML = response4 + `: ${result4 - 1}`
+        audio3.play()
+    }
+    function update5() {
+        result5++
+        document.getElementById("response5").innerHTML = response5 + `: ${result5 - 1}`
+        audio4.play()
+    }
+    function update6() {
+        result6++
+        document.getElementById("response6").innerHTML = response6 + `: ${result6 - 1}`
+        audio5.play()
+    }
+    function update7() {
+        result7++
+        document.getElementById("response7").innerHTML = response7 + `: ${result7 - 1}`
+        audio6.play()
+    }
     function finish() {
-        if (result1 > result2) {
-            alert(`${response1} WON!!!!!`)
+        audio8.play()
+        if (!finished) {
+        if (result1 > result2 && result1 > result4 && result1 > result5 && result1 > result6 && result1 > result7) {
+            finishtxt = `${response1} WON!!!!!! (Click to reset.)`
         }
-        else if (result2 > result1) {
-            alert(`${response2} WON!!!!!`)
+        else if (result2 > result1 && result2 > result4 && result2 > result5 && result2 > result6 && result2 > result7) {
+            finishtxt = `${response2} WON!!!!!! (Click to reset.)`
         }
-        else if (result1 = result2) {
-            alert("Its a tie.")
+        else if (result4 > result1 && result4 > result2 && result4 > result5 && result4 > result6 && result4 > result7) {
+            finishtxt = `${response4} WON!!!!!! (Click to reset.)`
+        }
+        else if (result5 > result1 && result5 > result4 && result5 > result2 && result5 > result6 && result5 > result7) {
+            finishtxt = `${response5} WON!!!!!! (Click to reset.)`
+        }
+        else if (result6 > result1 && result6 > result4 && result6 > result5 && result6 > result2 && result6 > result7) {
+            finishtxt = `${response6} WON!!!!!! (Click to reset.)`
+        }
+        else if (result7 > result1 && result7 > result4 && result7 > result5 && result7 > result6 && result7 > result2) {
+            finishtxt = `${response7} WON!!!!!! (Click to reset.)`
+        }
+        else if (result1 == result2 == result4 == result5 == result6 == result7) {
+            finishtxt = "Its an all-way tie. HOW. (Click to reset.)"
         }
         else {
-            alert("If you're seeing this, I messed up somehow.")
+            finishtxt = "Its a tie! (Click to reset.)"
         }
+        document.getElementById("finish").innerHTML = finishtxt
+        finished = true;
+    }
+    else if (finished) {
+        location.reload(true);
+    }
     }
 </script>
 <head>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title id="response1"></title>
-    <title id="response2"></title>
+    <title>Funny Poll</title>
     <link href="./styles.css" rel="stylesheet">
+  
 </head>
-<body>
-    <div class="centered-text1" id="response1"></div>
-    <div class="centered-text2" id="response2"></div>
-    <button class="finishbutton" type="button" onclick="finish()">Finish!</button>
+<body style="display: flex; justify-content: space-around">
+    <div class="centered-text1" id="response1" onclick="update1()">NULL</div>
+    <div class="centered-text4" id="response4" onclick="update4()">NULL</div>
+    <div class="centered-text5" id="response5" onclick="update5()">NULL</div>
+    <div class="centered-text3" id="finish" onclick="finish()"></div> 
+    <div class="centered-text2" id="response2" onclick="update2()">NULL</div>
+    <div class="centered-text6" id="response6" onclick="update6()">NULL</div>
+    <div class="centered-text7" id="response7" onclick="update7()">NULL</div>
     <script src="./scripts.js"></script>
 </body>
 </html>
