@@ -1,2 +1,9 @@
 # sillypoll
-branch edition
+
+## Picking correct answer for quizzes:
+Response 1 Code: 88192
+Response 2 Code: .!.!.!
+Response 4 Code: 8008135
+Response 5 Code: ****
+Response 6 Code: (*)
+Response 7 Code: 1225
