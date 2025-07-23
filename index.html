@@ -133,8 +133,13 @@
         document.getElementById("finish").innerHTML = finishtxt
         finished = true;
     }
-    else if (finished) {
+    else if (finished && correctResponse == false) {
         location.reload(true);
+    }
+    else if (finished && correctResponse != false) {
+        finishtxt = `The correct answer was ${correctResponse}!`
+        document.getElementById("finish").innerHTML = finishtxt
+        correctResponse = false
     }
     }
 </script>
