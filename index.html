@@ -9,6 +9,7 @@
     const audio6 = new Audio('./6.wav')
     const audio8 = new Audio('./8.wav')
     var finished = false
+    var correctResponse = `${responseNum}`
     var response1 = `NULL`
     var response2 = `NULL`
     var response4 = `NULL`
@@ -16,12 +17,41 @@
     var response6 = `NULL`
     var response7 = `NULL`
     var finishtxt = "Finish!"
+    var responseNum = `Pwacehowldaw`
     response1 = prompt("Answer one:")
     response2 = prompt("Answer two:")
     response4 = prompt("Answer three:")
     response5 = prompt("Answer four:")
     response6 = prompt("Answer five:")
     response7 = prompt("Answer six:")
+    responseNum = prompt("edoC retnE")
+    if (responseNum == "88192") {
+        correctResponse = response1
+    }
+    else if (responseNum == ".!.!.!") {
+        correctResponse = response2
+    }
+    else if (responseNum == "8008135") {
+        correctResponse = response4
+    }
+    else if (responseNum == "****") {
+        correctResponse = response5
+    }
+    else if (responseNum == "(*)") {
+        correctResponse = response6
+    }
+    else if (responseNum == "1225") {
+        correctResponse = response7
+    }
+    else {
+        correctResponse = false
+    }
+    // R1 Code: 88192
+    // R2 Code: .!.!.!
+    // R4 Code: 8008135
+    // R5 Code: ****
+    // R6 Code: (*)
+    // R7 Code: 1225
     window.onload = function() {
         document.getElementById("response1").innerHTML = response1
         document.getElementById("response2").innerHTML = response2
@@ -103,8 +133,13 @@
         document.getElementById("finish").innerHTML = finishtxt
         finished = true;
     }
-    else if (finished) {
+    else if (finished && correctResponse == false) {
         location.reload(true);
+    }
+    else if (finished && correctResponse != false) {
+        finishtxt = `The correct answer was ${correctResponse}!`
+        document.getElementById("finish").innerHTML = finishtxt
+        correctResponse = false
     }
     }
 </script>
