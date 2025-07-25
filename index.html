@@ -107,28 +107,28 @@
         audio8.play()
         if (!finished) {
         if (result1 > result2 && result1 > result4 && result1 > result5 && result1 > result6 && result1 > result7) {
-            finishtxt = `${response1} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response1} WON!!!!!!`
         }
         else if (result2 > result1 && result2 > result4 && result2 > result5 && result2 > result6 && result2 > result7) {
-            finishtxt = `${response2} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response2} WON!!!!!!`
         }
         else if (result4 > result1 && result4 > result2 && result4 > result5 && result4 > result6 && result4 > result7) {
-            finishtxt = `${response4} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response4} WON!!!!!!`
         }
         else if (result5 > result1 && result5 > result4 && result5 > result2 && result5 > result6 && result5 > result7) {
-            finishtxt = `${response5} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response5} WON!!!!!!`
         }
         else if (result6 > result1 && result6 > result4 && result6 > result5 && result6 > result2 && result6 > result7) {
-            finishtxt = `${response6} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response6} WON!!!!!!`
         }
         else if (result7 > result1 && result7 > result4 && result7 > result5 && result7 > result6 && result7 > result2) {
-            finishtxt = `${response7} WON!!!!!! (Click to reset.)`
+            finishtxt = `${response7} WON!!!!!!`
         }
         else if (result1 == result2 == result4 == result5 == result6 == result7) {
-            finishtxt = "Its an all-way tie. HOW. (Click to reset.)"
+            finishtxt = "Its an all-way tie. HOW."
         }
         else {
-            finishtxt = "Its a tie! (Click to reset.)"
+            finishtxt = "Its a tie!"
         }
         document.getElementById("finish").innerHTML = finishtxt
         finished = true;
