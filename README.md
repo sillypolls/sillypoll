@@ -7,3 +7,5 @@ Response 3 Code: 8008135
 Response 4 Code: ****
 Response 5 Code: (*)
 Response 6 Code: 1225
+
+Press Y to play a ding sound. Whatever thats worth.
