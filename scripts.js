@@ -38,3 +38,4 @@ const centeredText7 = document.querySelector('.centered-text7');
 centeredText7.addEventListener('click', () => {
     centeredText7.classList.toggle('clicked7');
 })
+

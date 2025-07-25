@@ -8,6 +8,7 @@
     const audio5 = new Audio('./5.wav')
     const audio6 = new Audio('./6.wav')
     const audio8 = new Audio('./8.wav')
+    const ding = new Audio('./ding.mp3')
     var finished = false
     var correctResponse = `${responseNum}`
     var response1 = `NULL`
@@ -142,6 +143,15 @@
         correctResponse = false
     }
     }
+    document.addEventListener(
+    "keydown",
+    (event) => {
+        const keyName = event.key
+        if (keyname == control) {
+            ding.play()
+        }
+    }
+)
 </script>
 <head>
     <meta charset="UTF-8"/>
